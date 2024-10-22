@@ -1,4 +1,20 @@
 .DS_Store
 *.img
 *.img.gz
+*.bin
+*.com
 
+; 测试方法：
+; 本地（类UNIX，我是macOS）制作软盘（floppy image）：
+; dd if=/dev/zero of=floppy.img bs=512 count=2880
+; 
+; DOSBox下将任务程序写到软盘中：
+; > IMGMOUNT 0 PATH/TO/FLOPPY.IMG -t floppy -fs none // 挂载软盘
+; > .\DESIGN2.EXE // 将程序写入软盘
+; > IMGMOUNT -U 0 // 卸载软盘映像
+; 
+; DOSBox测试软盘
+; > BOOT PATH/TO/FLOPPY.IMG
+; 即可启动软盘内的程序。
+; 
+; 但是其实还是需要虚拟机，因为DOSBox不能展示引导操作系统的过程。。。

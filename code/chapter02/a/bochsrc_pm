@@ -8,18 +8,21 @@ megs: 32
 display_library: sdl2
 
 # filename of ROM images
-# romimage: file=/usr/share/bochs/BIOS-bochs-latest
-romimage: file=/opt/homebrew/Cellar/bochs/2.8/share/bochs/BIOS-bochs-latest
+#romimage: file=/usr/local/share/bochs/BIOS-bochs-latest
+romimage: file=$BXSHARE/BIOS-bochs-latest
 
 # vgaromimage: /usr/share/vgabios/vgabios.bin
-vgaromimage: file=/opt/homebrew/Cellar/bochs/2.8/share/bochs/VGABIOS-lgpl-latest
+vgaromimage: file=$BXSHARE/VGABIOS-lgpl-latest
+
+
 
 # what disk images will be used
+# floppya: 1_44=a.img, status=inserted
 floppya: 1_44=freedos.img, status=inserted
 floppyb: 1_44=pm.img, status=inserted
 
 # choose the boot disk.
-boot: a
+boot: floppy
 
 # where do we send log messages?
 log: bochsout.txt
@@ -28,5 +31,4 @@ log: bochsout.txt
 mouse: enabled=0
 
 # enable key mapping, using US layout as default.
-# keyboard_mapping: enabled=1, map=/usr/share/bochs/keymaps/x11-pc-us.map
-keyboard: keymap=/opt/homebrew/Cellar/bochs/2.8/share/bochs/keymaps/sdl2-pc-us.map
+keyboard: keymap=$BXSHARE/keymaps/sdl2-pc-us.map

@@ -37,5 +37,6 @@ mouse: enabled=0
 # keyboard_mapping: enabled=1, map=/usr/share/bochs/keymaps/x11-pc-us.map
 # keyboard_mapping: enabled=1, map=/opt/homebrew/Cellar/bochs/2.8/share/bochs/keymaps/x11-pc-us.map
 # keyboard: keymap=$BXSHARE/keymaps/x11-pc-us.map
-keyboard: keymap=/opt/homebrew/Cellar/bochs/2.8/share/bochs/keymaps/x11-pc-us.map
+# keyboard: keymap=/opt/homebrew/Cellar/bochs/2.8/share/bochs/keymaps/x11-pc-us.map
+keyboard: keymap=/opt/homebrew/Cellar/bochs/2.8/share/bochs/keymaps/sdl2-pc-us.map
 
